@@ -5,6 +5,7 @@ import cgi
 import sys
 import base64
 import MySQLdb
+import ConfigParser
 
 if os.environ['REQUEST_METHOD'] != "POST":
     print 'Access Denied.'
@@ -16,10 +17,19 @@ if os.environ['REQUEST_METHOD'] != "POST":
 
 #Procedure
 
-# DBへログイン
+##### DB Login #####
 # localhostの場合は省略可
-connector = MySQLdb.connect(host="localhost", db="gphrases", user="root", passwd="mysql", charset="utf8")
+inifile = ConfigParser.SafeConfigParser()
+inifile.read('./config.ini')
+host = inifile.get('mysql', 'host')
+db = inifile.get('mysql', 'db')
+user = inifile.get('mysql', 'user')
+passwd = inifile.get('mysql', 'passwd')
+charset = inifile.get('mysql', 'charset')
+
+connector = MySQLdb.connect(host=host, db=db, user=user, passwd=passwd, charset=charset)
 cursor = connector.cursor()
+
 # SQL
 sql = "SELECT * FROM goldenPhrases ;"
 cursor.execute(sql)

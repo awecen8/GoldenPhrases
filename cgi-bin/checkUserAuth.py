@@ -6,6 +6,7 @@ import sys
 import base64
 import datetime
 import MySQLdb
+import ConfigParser
 import os,cgi,cgitb,Cookie; cgitb.enable()
 from Cookie import SimpleCookie
 from Crypto.Cipher import AES
@@ -33,12 +34,19 @@ u = form["user"].value
 p = form["pass"].value
 fw.write("\nuser:%s/pass:%s"%(u,p))
 
-# DBへログイン
+##### DB Login #####
 # localhostの場合は省略可
+inifile = ConfigParser.SafeConfigParser()
+inifile.read('./config.ini')
+host = inifile.get('mysql', 'host')
+db = inifile.get('mysql', 'db')
+user = inifile.get('mysql', 'user')
+passwd = inifile.get('mysql', 'passwd')
+charset = inifile.get('mysql', 'charset')
 
-fw.write("\nDB connecting...")
-connector = MySQLdb.connect(host="localhost", db="gphrases", user="root", passwd="mysql", charset="utf8")
+connector = MySQLdb.connect(host=host, db=db, user=user, passwd=passwd, charset=charset)
 cursor = connector.cursor()
+
 # SQL
 sql = "SELECT * FROM users WHERE name = \'" + u + "\' ;"
 fw.write("\n%s"%str(sql))

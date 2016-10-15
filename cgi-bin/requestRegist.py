@@ -5,6 +5,7 @@ import cgi
 import sys
 import base64
 import MySQLdb
+import ConfigParser
 import datetime
 import os,cgi,cgitb,Cookie; cgitb.enable()
 from Cookie import SimpleCookie

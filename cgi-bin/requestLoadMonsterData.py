@@ -5,6 +5,7 @@ import cgi
 import sys
 import base64
 import MySQLdb
+import ConfigParser
 from datetime import datetime
 
 if os.environ['REQUEST_METHOD'] != "POST":
