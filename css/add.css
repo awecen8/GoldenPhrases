@@ -1,0 +1,817 @@
+/****** ナビゲーションバー ******/
+/* 選択メニュー */
+.nav-check-selected{
+  background-color: #E7E7E7;
+}
+.nav-menu{
+  background-color: #FFFEFF;
+  padding: 5px;
+  border: 0.5px solid #EEEEEE;
+  border-radius: 10px;
+}
+
+/* 既存調整 */
+.nav>li>a {
+  /*padding: 15px 10px;*/
+}
+
+.page-navigation-ul-mobile{
+    float: right;
+    margin: 0px;
+}
+
+.page-navigation-ul-mobile>li{
+    cursor: pointer;
+}
+
+.tab-menu-a{
+  color: #777;
+}
+
+.tab-menu-a:hover{
+background-color:#FBFBFB;
+}
+.tab-menu-whin{
+  background-color: #FFFAFA;
+  border: 1px solid #DADFDA;    
+}
+.tab-menu-check{
+  background-color: #FFFFDF;
+  border: 1px solid #DADFDA;    
+}
+.tab-menu-whout{
+  background-color: #F0FFF0;
+  border: 1px solid #DADFDA;	
+}
+
+
+
+/***** 全画面共通 *****/
+/*各ページタイトル用*/
+.page-title{
+  float:left;
+  font-size:16px;
+  color: #666;
+  padding: 10px;
+  background-color: #ffbd9d;
+  border: 0.5px solid #DDD;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+small{
+  font-weight: normal;
+  color: #888;	
+}
+
+#overlay{
+  background-color: gray;
+  opacity: 0.0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+#div-bottom-area{
+  padding: 10px;
+  margin: 10px 0px;
+  background-color: #F0F0C6;
+  border-radius: 10px;
+  border: 1px solid #EFEFC0;
+}
+
+/* 状態ラベル */
+.label-status{
+  padding: 5px 10px;
+  float: left;
+}
+
+/* 操作完了暗転行 */
+.confirmed-row{
+  background-color: #EFEFEF;
+}
+.table-hover>tbody>.confirmed-row:hover{
+  background-color: #DFDFDF;
+}
+
+/* 新規作成強調行(通常) */
+.new-add-row{
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-name: blank-normal;	
+}
+
+@keyframes blank-normal {
+  from {
+    background-color: #FFFFFF;
+  }
+
+  to {
+    background-color: #F9E9E9;
+	
+  }
+}
+
+/* 新規作成強調行(処理完了行) */
+.new-add-confirmed-row{
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-name: blank-confirmed; 
+}
+
+@keyframes blank-confirmed {
+  from {
+    background-color: #EFEFEF;
+  }
+
+  to {
+    background-color: #E6D0D0;
+    
+  }
+}
+
+/* 検索フォーム*/
+.search-form{
+  margin-right: 10px;
+}
+
+/* ソートヘッダー */
+.table-header-sort:hover{
+  /*background-color: #EED9C7;*/
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* 画面間ジャンプアイコン*/
+.td-jump{
+  color:#D0D0FF;
+}
+.td-jump:hover{
+  color:#333366;
+}
+.td-jump-selected{
+  color:#333333;
+}
+/* ジャンプメニュー */
+#jump-overlay{
+  opacity:0.0;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  display:none;
+}
+
+#jump-menu{
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  display:none;
+}
+.jump-menu-header{
+  padding:8px;
+  font-weight: bold;
+}
+.jump-menu-item{
+  padding: 5px;
+}
+
+.jump-menu-item:hover{
+  cursor: pointer;
+  background-color:#EEFFEE;	
+}
+
+.jump-res-tr{
+  background-color:#fFf5f5;
+}
+
+/***** 入力画面共通 *****/
+.td-add-new-row{
+  text-align: center;
+  background-color: #EEE;
+  border-bottom-left-radius:10px;
+  border-bottom-right-radius:10px;
+}
+.td-add-new-row:hover{
+  cursor: pointer;
+  background-color: #DDD;
+}
+
+/***** グラフ *****/
+#div-historical-graph{
+	background-color: #EEFFFF;
+	height: 250px;
+	width: 100%;
+	margin: 10px 0px;
+	border-radius: 5px;
+	border: #DDDDDD solid 1px;
+}
+.div-meter{
+	text-align: center;
+	height: 0px;
+	width: 5%;	
+	margin-right: 20px;
+	margin-bottom: 0px;
+	margin-left: 20px;
+	float: left;
+}
+.div-meter-body-now{
+	background-color: #BFFFBF;
+}
+.div-meter-body-add{
+	background-color: #FFBFBF;
+}
+.div-meter-body-des{
+	border: 1px solid #BFFFBF;
+	border-bottom: 0px solid #BFFFBF;
+}
+.div-meter-value{
+	text-align: center;
+	color: #666;	
+	position: absolute;
+}
+.div-graph-date{
+	float: left;
+	width: 8%;
+	text-align: center
+}
+.div-graph-control{
+	overflow: hidden;
+	padding-bottom: 5px;
+}
+.div-graph-control>.form-group{
+	float: right;
+	margin: 0px;
+	margin-right: 20px;
+}
+.div-graph-control>.btn{
+	float: right;
+}
+.form-label-plus{
+	float: right;
+	font-size: large;
+	margin-right: 5px;
+	color: #888;
+	padding-top: 5px;
+}
+.div-table-label{
+	float: left;
+	font-size: x-large;
+	margin-right: 5px;
+	color: #888;
+	cursor: pointer;
+}
+
+/***** 上下限設定画面 *****/
+#div-limit-display-setting{
+	background-color: #CFC;
+	border: 1px solid #BFB;
+	border-radius: 5px;
+	overflow: hidden;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+.display-limit{
+	float: left;
+	width: 20%;
+	text-align: center;
+}
+.display-label{
+	margin-top: 5px;
+	width: 5%;
+}
+.display-label-limit{
+	margin-top: 5px;
+	width: 10%;
+}
+.display-ul{
+	width: 20%;
+}
+.display-nv{
+	width: 20%;
+}
+.display-ll{
+	width: 20%;
+}
+
+/*上下限 設定 倉庫リスト(左側)*/
+.div-limit-whouse-list{
+  float: left;
+  width: 15%;
+}
+/* hover */
+.limit-whouse-item:hover{
+  background-color:#AAA;
+  color: #FFF;
+}
+
+/* 選択時 */
+.limit-whouse-item-selected{
+  background-color:#E0E0FF;
+  font-weight:bold;
+}
+
+/* エラー時 */
+.limit-whouse-item-error{
+  background-color:#FFE0E0;
+}
+
+/*上下限 設定 商品リスト(右側)*/
+.div-limit-item-list{
+  float: right;
+  width: 83%;
+  opacity: 1.0;
+}
+/*一括入力BODY*/
+.panel-all-input{
+  border-top: 0.5px solid #DDD;
+  border-bottom: 0.5px solid #DDD;
+  background-color: #F6F6FF;
+}
+.input-limit-ul-all{
+  text-align: right;
+}
+.input-limit-ll-all{
+  text-align: right;
+}
+
+/***** 操作コメント設定画面 ******/
+.div-comment-var{
+  border: 0.5px solid #DDD;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom:5px;
+  display: none;
+}
+
+/***** 在庫詳細 *****/
+.stock-info{
+  overflow:hidden;
+}
+
+.stock-item-info{
+  float: left;
+  width: 29%;
+}
+
+.stock-item-trans{
+  float: right;
+  width: 70%;
+}
+
+/*****グラフ色調設定*****/
+/*グラフ色調設定関連*/
+.div-graph-color-setting-label{
+  color: #666;
+  float: left;
+}
+.modal-body{
+	overflow: hidden;
+}
+.btn-gcs{
+  margin: 0px 5px;
+}
+/* 色選択ボタン <input> */
+.color-picker{
+  width: 60px;  
+  margin-bottom: 0px;
+}
+/* 色選択ボタン<div>　*/
+.color-picker-input{
+	width: initial;
+}
+/* 色選択項目ラベル<label> */
+.color-picker-label{
+  padding: 0px;
+  width: 100%;
+}
+/* 色選択各項目<div>*/
+.div-graph-color-item{
+  overflow: hidden;
+  float: left;
+  width: 50%;
+}
+/*色調設定画面左側(各項目)<div>*/
+.div-setting-items{
+  overflow: hidden;
+  float: left;
+  width: 50%;
+}
+/*色調選択項目<div>*/
+.div-modal-body-items{
+  border-bottom: 0.5px solid #DDD;
+  overflow: hidden;
+  margin: 5px;
+}
+/*色調選択項目の最後<div>*/
+.div-modal-body-items-last{
+  border-bottom: 0px;
+}
+/*色調設定画面右側(参考グラフ)<div>*/
+.div-setting-graph-model{
+  overflow: hidden;
+  float: right;
+  width: 50%;
+}
+/*色調選択画面右側 参考グラフ背景*/
+.div-setting-graph-model-background{
+  border-radius: 5px;
+  border: 0.5px solid #CCC;
+}
+#div-historical-date{
+  height:25px;
+}
+
+/******* チェック表 *******/
+/* チェックボタン */
+.btn-check-qty{
+  float: left;
+  width:48%;
+}
+/* チェック済みボタン */
+.btn-checked-qty{
+  width: 100%;
+}
+/* 修正ボタン */
+.btn-modify-qty{
+  float: right;
+  width:48%;
+}
+/* 修正一時保存ボタン */
+.btn-modifing-qty{
+  width: 100%;
+}
+/* 修正数量入力テキストボックス */
+.input-modify-qty{
+  text-align: right;
+  font-size: 18px;
+  width:100%;
+  color: #222;
+}
+/* チェック内容保存ボタン */
+.btn-reserve-check{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/******チェック履歴 詳細*****/
+/* 履歴詳細情報各項目div */
+#div-check-detail-info{
+  margin-bottom: 20px;
+  margin-top: 2px;	
+}
+.label-check-detail-info{
+  font-size: 14px;
+}
+.div-check-detail-info{
+  overflow: hidden;
+  margin: 5px 0px;
+  border-bottom: 0.5px solid #DDD;
+}
+.span-check-detail-label{
+  float:left;
+  width: 20%;
+  font-weight: bold;
+  padding: 1px 10px;
+}
+.span-check-detail-value{
+  float:left;
+  margin-left: 10px;
+}
+/****** 承認ボタン用div ******/
+#btn-confirm-check-detail{
+  margin: 15px 0px;
+}
+
+/****** 入庫予定一覧 ******/
+/* CSV読み込みボタン */
+.btn-read-csv{
+  float: left;
+  width: 25%;
+  margin: 5px 0px;
+  overflow: hidden;	
+}
+/* 入庫予定新規作成ボタン */
+.btn-new-whin{
+  float: right;
+  width: 15%;
+  margin: 5px 0px;
+  overflow: hidden;
+}
+/* ヘルプアイコン */
+#div-read-csv-help-icon{
+  float:left;
+  color: #666;
+  font-size: x-large;
+  margin: 8px;
+  overflow: hidden;
+}
+#div-read-csv-help-icon:hover{
+  color: #333;
+  cursor: pointer;
+}
+/* CSV ドラッグアンドドロップ領域 */
+#div-dd-csv-area{
+  width: 100%;
+  color: #666;
+  text-align: center;
+  padding: 25px 0px;
+  background-color: #EFE;
+  border: 2px dashed #CFC;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+/* 入力情報確認ダイアログのパネルヘッダーの既定処理解除 */
+.a-header-in-plan-table{
+  color: #333;
+}
+.a-header-in-plan-table:hover{
+  color: #333;
+  text-decoration: none;
+}
+.a-header-in-plan-table:focus{
+  color: #333;
+  text-decoration: none;
+}
+
+/****** 入庫予定詳細 ******/
+/* 各項目確認ボタン */
+.btn-whousein-confirm{
+  width: 48%;
+  float: left;
+}
+/* 各項目修正ボタン */
+.btn-whousein-modify{
+  width: 48%;
+  float: right;
+}
+/* 全確認+入庫登録ボタン */
+#btn-whousein-all-confirm{
+  width: 100%;	
+}
+
+/****** 商品取寄せ請求情報入力画面 ******/
+.span-req-input-info-label{
+  float:left;
+  width: 13%;
+  font-weight: bold;
+  padding: 1px 0px;	
+}
+/* 下部ボタンDIV */
+#div-bottom-req-input{
+
+}
+/* 行追加ボタン */
+#btn-req-add-row{
+  margin: 10px;
+}
+/* 内容確認ボタン */
+#btn-req-confirm{
+  margin: 10px 0px;
+}
+/* メッセージエリア */
+#div-req-input-message{
+  border: 1px solid #DDD;
+  border-radius: 5px;
+  background-color: #FEE;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  padding: 9px;
+  color: #F44;
+}
+
+/****** 商品取寄せ請求情報確認画面 ******/
+/* 下部ボタンDIV */
+#div-bottom-req-input{
+
+}
+/* 入力内容確認メッセージDIV */
+#div-input-confirm-msg{
+  text-align: center;
+  color: #666;
+  font-size: large;
+  margin: 10px;
+}
+/* 戻るボタン */
+#btn-req-back-input{
+  margin: 10px;
+}
+/* 内容送信ボタン */
+#btn-req-confirm-send{
+  margin: 10px;
+}
+
+/****** 商品取寄せ請求 完了画面 ******/
+/* メッセージDIV */
+#div-req-complete-msg{
+  text-align: center;
+  color: #666;
+  font-size: large;
+  margin: 10px;	
+}
+#div-req-complete-msg-no{
+  text-align: center;
+  color: #666;
+  margin: 10px;	
+}
+#div-req-complete-bottom-msg{
+  text-align: center;
+  color: #666;
+  margin: 10px;	
+}
+
+/****** 商品取寄せ請求 履歴詳細画面 ******/
+#div-req-detail{
+  margin-bottom: 20px;
+  margin-top: 2px;	
+}
+.div-req-detail-item{
+  overflow: hidden;
+  margin: 5px 0px;
+  border-bottom: 0.5px solid #DDD;
+}
+.span-req-detail-label{
+  float:left;
+  width: 20%;
+  font-weight: bold;
+  padding: 1px 10px;
+}
+.span-req-detail-value{
+  float:left;
+  margin-left: 10px;
+}
+
+/*******モーダルダイアログ共通********/
+.modal-header{
+  background-color: #E6E6F6;
+  border-radius: 5px 5px 0px 0px;
+  padding: 7px 15px;
+}
+.modal-title{
+  font-weight: bold;
+}
+.modal-footer{
+  background-color: #EEE;
+  border-radius: 0px 0px 5px 5px;
+  padding: 5px;
+}
+
+/*****　詳細画面共通 *****/
+#div-detail-info{
+	
+}
+
+/****** 出庫予定詳細 ******/
+/* 各項目確認ボタン */
+.btn-whouseout-confirm{
+  width: 48%;
+  float: left;
+}
+/* 各項目修正ボタン */
+.btn-whouseout-modify{
+  width: 48%;
+  float: right;
+}
+/* 全確認+出庫登録ボタン */
+#btn-whouseout-all-confirm{
+  width: 100%;  
+}
+/* メッセージエリア */
+#div-whout-check-message{
+  border: 1px solid #DDD;
+  border-radius: 5px;
+  background-color: #FEE;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  padding: 9px;
+  color: #F44;
+}
+
+/****** 配送予定詳細 ******/
+/* 各項目確認ボタン */
+.btn-deliv-confirm{
+  width: 48%;
+  float: left;
+}
+/* 各項目修正ボタン */
+.btn-deliv-modify{
+  width: 48%;
+  float: right;
+}
+
+/* メッセージエリア */
+#div-deliv-check-message{
+  border: 1px solid #DDD;
+  border-radius: 5px;
+  background-color: #FEE;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  padding: 9px;
+  color: #F44;
+}
+
+/****** 集計詳細 *******/
+/* 左側商品リスト */
+#totalize-item-list{
+  float:left;
+  width:28%;
+  overflow:hidden;
+}
+/* 左側商品リスト各項目 */
+.req-item:hover{
+  cursor: pointer;
+}
+
+/* 左側商品リスト各項目(通常時) */
+.req-item-normal:hover{
+  background-color:#EEEEEE;
+}
+/* 左側商品リスト各項目(通常選択時) */
+.req-item-selected{
+  font-weight: bold;
+  background-color:#E0E0E0;
+}
+.req-item-selected:hover{
+  font-weight: bold;
+  background-color:#D0D0D0;
+}
+/* 左側商品リスト各項目(不足時) */
+.req-item-short{
+  background-color:#FFF0F0;
+}
+.req-item-short:hover{
+  background-color:#FFD6D6;
+}
+/* 左側商品リスト各項目(不足選択時) */
+.req-item-short-selected{
+  font-weight: bold;
+  background-color:#FFD0D0;
+}
+.req-item-short-selected:hover{
+  font-weight: bold;
+  background-color:#F0C6C6;
+}
+/* 右側分配内容 */
+#totalize-shop-list{    
+  float:right;
+  width:70%;
+  overflow:hidden;
+}
+/* 商品分類SPAN */
+#totalize-detail-item-kind{
+  margin-right: 30px;
+}
+/* 商品コードSPAN */
+#totalize-detail-item-code{
+  margin-right: 30px;
+}
+/* メーカSPAN */
+#totalize-detail-item-maker{
+  margin-right: 30px;
+}
+/* 商品詳細SPAN */
+#totalize-detail-item-detail{
+  margin-right: 30px;
+}
+/* 現在在庫量SPAN */
+#totalize-item-balance{
+  margin-right: 30px;
+  font-weight: bold;
+  font-size: large;
+  color: #666;
+}
+/* 請求合計量SPAN */
+#totalize-item-req{
+  margin-right: 30px;
+  font-weight: bold;
+  font-size: large;
+  color: #666;   
+}
+/* 不足ラベル */
+#totalize-item-status{
+  font-size: large;
+}
+
+/****** 詳細画面系 *****/
+.div-general-info{
+  overflow: hidden;
+  margin: 5px 0px;
+  border-bottom: 0.5px solid #DDD;
+}
+
+.general-header{
+  font-weight: bold;
+  padding: 1px 10px;
+}
+
+.general-value{
+  margin-right: 40px;
+}

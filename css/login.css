@@ -1,0 +1,30 @@
+
+body{
+  background-image : url('..\\src\\img\\login.jpg');
+}
+
+#div-login-input-forms{
+  background-color: rgba(255,255,255,0.95);
+  border-radius: 10px;
+  width: 50%;
+  padding: 5%;
+}
+
+#input-login-user{
+  margin-top:10px;
+  margin-bottom: 10px;
+}
+
+#input-login-pass{
+  margin-top:10px;
+  margin-bottom: 10px;
+}
+
+#input-login-pass-re{
+  margin-top:10px;
+  margin-bottom: 10px;
+}
+
+#btn-login{
+  margin-top:10px;
+}

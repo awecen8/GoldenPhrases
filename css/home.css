@@ -1,0 +1,26 @@
+.panel-user-info{
+  float: left;
+  margin: 1% 0%;
+  width:18%;
+}
+
+.panel-user-stats{
+  float: left;
+  margin: 1% 1%;
+  width: 22%;
+}
+
+.stats-items:hover{
+  cursor: pointer;
+  background-color: #EEEEFF;
+}
+
+.panel-user-stats-detail{
+  float: left;
+  margin: 1% 1%;
+  width: 56%;
+}
+
+.progress{
+  margin-bottom: 0px;
+}

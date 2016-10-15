@@ -1,0 +1,1 @@
+mysqldump --single-transaction -u root -p gphrases > /home/guest/dmp20160808

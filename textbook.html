@@ -1,0 +1,202 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+<title>Python CGI</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="lib/jquery.min.js"></script>
+<script type="text/javascript" src="lib/bootstrap.min.js"></script>
+<script type="text/javascript" src="lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/cookie.js"></script>
+<script type="text/javascript" src="js/auth.js"></script>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/common.css" rel="stylesheet">
+<link href="css/textbook.css" rel="stylesheet">
+
+</head>
+<body>
+  <!-- HEADER -->
+  <div id="header">
+    <nav class="navbar navbar-default">
+    	<div class="container-fluid">
+    		<div class="navbar-header">
+    			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarEexample1">
+    				<span class="sr-only">Toggle navigation</span>
+    				<span class="icon-bar"></span>
+    				<span class="icon-bar"></span>
+    				<span class="icon-bar"></span>
+    			</button>
+    			<a class="navbar-brand" href="#">タイトル</a>
+    		</div>
+
+    		<div class="collapse navbar-collapse" id="navbarEexample1">
+    			<ul class="nav navbar-nav">
+            <li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> ホーム</a></li>
+            <li class="active"><a href=""><span class="glyphicon glyphicon-book" aria-hidden="true"></span> テキスト</a></li>
+    				<li><a href="quest.html"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span> ひたすら問題</a></li>
+    				<li><a href="exam.html"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> 試験</a></li>
+    				<li><a href="update.html"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> 登録データ編集</a></li>
+    				<li><a href="roulette.html"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 休憩</a></li>
+    			</ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a id="a-log-out" href=""><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> ログアウト</a></li>
+          </ul>
+    		</div>
+    	</div>
+    </nav>
+  </div>
+
+  <!-- CONTAINER -->
+  <div id="container">
+    <ul class="nav nav-tabs">
+    	<li class="nav-tab-left active"><a href="#l1" data-toggle="tab">600点レベル</a></li>
+      <li><a href="#l2" data-toggle="tab">730点レベル</a></li>
+      <li><a href="#l3" data-toggle="tab">860点レベル</a></li>
+      <li><a href="#l4" data-toggle="tab">990点レベル</a></li>
+      <li><a href="#l5" data-toggle="tab">その他</a></li>
+    </ul>
+    <div class="tab-content">
+      <!-- 600 -->
+      <div class="tab-pane active tab-lev" id="l1">
+        <div id="div-tab-lev1" class="div-tab-page">
+          <div id="page-prev-lev1" class="page-prev"><p>＜</p></div>
+          <div id="page-next-lev1" class="page-next"><p>＞</p></div>
+          <div style="overflow:hidden;width:92%;margin-left:2%;margin-top:3%;">
+            <div style="float:left;margin:10px;width:13%;">
+              <input class="form-control" type="number" id="page-num-lev1" value="1">
+            </div>
+            <div style="float:left;margin:2% 1% 1% 1%;width:82%">
+              <input id="page-slider-lev1" type="range" min="1" max="400" step="1" value="1" />
+            </div>
+          </div>
+          <div class="tab-contents div-textbook-main">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                No.<span id="qnum-lev1">1</span>
+              </div>
+              <table class="table">
+            		<tbody id="tbody-lev1">
+            		</tbody>
+            	</table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 730 -->
+      <div class="tab-pane tab-lev" id="l2">
+        <div id="div-tab-lev2" class="div-tab-page">
+          <div id="page-prev-lev2" class="page-prev"><p>＜</p></div>
+          <div id="page-next-lev2" class="page-next"><p>＞</p></div>
+          <div style="overflow:hidden;width:92%;margin-left:2%;margin-top:3%;">
+            <div style="float:left;margin:10px;width:13%;">
+              <input class="form-control" type="number" id="page-num-lev2" value="1">
+            </div>
+            <div style="float:left;margin:2% 1% 1% 1%;width:82%">
+              <input id="page-slider-lev2" type="range" min="1" max="300" step="1" value="1" />
+            </div>
+          </div>
+          <div class="tab-contents div-textbook-main">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                No.<span id="qnum-lev2">1</span>
+              </div>
+              <table class="table">
+            		<tbody id="tbody-lev2">
+            		</tbody>
+            	</table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 860 -->
+      <div class="tab-pane tab-lev" id="l3">
+        <div id="div-tab-lev3" class="div-tab-page">
+          <div id="page-prev-lev3" class="page-prev"><p>＜</p></div>
+          <div id="page-next-lev3" class="page-next"><p>＞</p></div>
+          <div style="overflow:hidden;width:92%;margin-left:2%;margin-top:3%;">
+            <div style="float:left;margin:10px;width:13%;">
+              <input class="form-control" type="number" id="page-num-lev3" value="1">
+            </div>
+            <div style="float:left;margin:2% 1% 1% 1%;width:82%">
+              <input id="page-slider-lev3" type="range" min="1" max="200" step="1" value="1" />
+            </div>
+          </div>
+          <div class="tab-contents div-textbook-main">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                No.<span id="qnum-lev3">1</span>
+              </div>
+              <table class="table">
+            		<tbody id="tbody-lev3">
+            		</tbody>
+            	</table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 990 -->
+      <div class="tab-pane tab-lev" id="l4">
+        <div id="div-tab-lev4" class="div-tab-page">
+          <div id="page-prev-lev4" class="page-prev"><p>＜</p></div>
+          <div id="page-next-lev4" class="page-next"><p>＞</p></div>
+          <div style="overflow:hidden;width:92%;margin-left:2%;margin-top:3%;">
+            <div style="float:left;margin:10px;width:13%;">
+              <input class="form-control" type="number" id="page-num-lev4" value="1">
+            </div>
+            <div style="float:left;margin:2% 1% 1% 1%;width:82%">
+              <input id="page-slider-lev4" type="range" min="1" max="100" step="1" value="1" />
+            </div>
+          </div>
+          <div class="tab-contents div-textbook-main">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                No.<span id="qnum-lev4">1</span>
+              </div>
+              <table class="table">
+            		<tbody id="tbody-lev4">
+            		</tbody>
+            	</table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ETC -->
+      <div class="tab-pane tab-lev" id="l5">
+        <div id="div-tab-lev5" class="div-tab-page">
+          <div id="page-prev-lev5" class="page-prev"><p>＜</p></div>
+          <div id="page-next-lev5" class="page-next"><p>＞</p></div>
+          <div style="overflow:hidden;width:92%;margin-left:2%;margin-top:3%;">
+            <div style="float:left;margin:10px;width:13%;">
+              <input class="form-control" type="number" id="page-num-lev5" value="1">
+            </div>
+            <div style="float:left;margin:2% 1% 1% 1%;width:82%">
+              <input id="page-slider-lev5" type="range" min="1" max="319" step="1" value="1" />
+            </div>
+          </div>
+          <div class="tab-contents div-textbook-main">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                No.<span id="qnum-lev5">1</span>
+              </div>
+              <table class="table">
+            		<tbody id="tbody-lev5">
+            		</tbody>
+            	</table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div id="footer">
+    <span id="copyright">Copyright © 2016 Awecen All Rights Reserved.</span>
+  </div>
+
+  <!-- LOAD SCRIPT -->
+  <script type="text/javascript" src="js/textbook.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+.tab-lev{
+  min-height: 350px;
+}
+.div-textbook-main{
+  width: 90%;
+}
+
+.div-tab-page{
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.page-prev{
+  cursor: pointer;
+  position: absolute;
+  top: 25%;
+  left: 0;
+  height: 35%;
+  width: 5%;
+  background-color: #EEE;
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+  vertical-align: middle;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.page-prev:hover{
+  background-color: gray;
+}
+.page-prev>p{
+  position: relative;
+  top:50%;
+}
+
+.page-next{
+  cursor: pointer;
+  position: absolute;
+  top: 25%;
+  left: 95%;
+  height: 35%;
+  width: 5%;
+  background-color: #EEE;
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+  vertical-align: middle;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.page-next:hover{
+  background-color: gray;
+}
+.page-next>p{
+  position: relative;
+  top:50%;
+}

@@ -1,0 +1,95 @@
+/*- -*/
+#header{
+
+}
+#container{
+  margin: 10px 10px;
+  /*border: 0.5px solid #DDD*/
+}
+
+.nav-tab-left{
+  margin-left: 30px;
+}
+
+.tab-contents{
+  margin:30px;
+
+}
+
+.textarea-python-request{
+  /*margin: 10px 0px;*/
+}
+
+.textarea-python-response{
+  margin: 10px 0px;
+}
+
+#questionNumber{
+  font-style: italic;
+  font-size: large;
+}
+
+#question-area{
+  color: #666;
+  padding: 10px;
+  border-radius: 10px;
+  border: 0.5px solid #CCC;
+
+}
+
+#answer-area{
+  padding: 10px;
+  border-radius: 10px;
+  border: 0.5px solid #CCC;
+  overflow: hidden;
+  margin-top:10px;
+}
+
+/*登録データ*/
+#div-datalist{
+  overflow: hidden;
+}
+#div-datalist-list{
+  float: left;
+  width: 15%;
+  overflow: hidden;
+}
+.a-datalist-item{
+  cursor: pointer;
+
+}
+/*#div-datalist-nar{
+  float: left;
+  width: 9%;
+  margin-left:1%;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.a-datalist-item-nar{
+  cursor: pointer;
+}*/
+
+#div-datalist-detail{
+  float: right;
+  width: 84%;
+  overflow: hidden;
+}
+.datalist-detail-header{
+  font-size: small;
+  color:#999;
+  margin-right: 10px;
+}
+
+
+#footer{
+  margin: 10px 0px;
+  width:100%;
+  text-align: center;
+  background-color: #DDDDDD;
+  overflow: hidden;
+}
+/* copyright(span) */
+#copyright{
+  font-size:small;
+  color: #999999;
+}

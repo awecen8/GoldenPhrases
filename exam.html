@@ -1,0 +1,185 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+<title>Python CGI</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="lib/jquery.min.js"></script>
+<script type="text/javascript" src="lib/bootstrap.min.js"></script>
+<script type="text/javascript" src="lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/cookie.js"></script>
+<script type="text/javascript" src="js/auth.js"></script>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/common.css" rel="stylesheet">
+<link href="css/exam.css" rel="stylesheet">
+</head>
+<body>
+  <!-- HEADER -->
+  <div id="header">
+    <nav class="navbar navbar-default">
+    	<div class="container-fluid">
+    		<div class="navbar-header">
+    			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarEexample1">
+    				<span class="sr-only">Toggle navigation</span>
+    				<span class="icon-bar"></span>
+    				<span class="icon-bar"></span>
+    				<span class="icon-bar"></span>
+    			</button>
+    			<a class="navbar-brand" href="#">タイトル</a>
+    		</div>
+
+    		<div class="collapse navbar-collapse" id="navbarEexample1">
+    			<ul class="nav navbar-nav">
+
+            <li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> ホーム</a></li>
+            <li><a href="textbook.html"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> テキスト</a></li>
+    				<li><a href="quest.html"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span> ひたすら問題</a></li>
+    				<li class="active"><a href=""><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> 試験</a></li>
+    				<li><a href="update.html"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> 登録データ編集</a></li>
+    				<li><a href="roulette.html"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 休憩</a></li>
+
+    			</ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a id="a-log-out" href="">
+              <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> ログアウト
+            </a></li>
+          </ul>
+    		</div>
+    	</div>
+    </nav>
+  </div>
+
+  <!-- CONTAINER -->
+  <div id="container">
+    <div id="div-exam-items" class="panel panel-default">
+    	<div class="panel-heading">
+        試験リスト
+    	</div>
+        <div class="list-group">
+      		<!-- <a class="list-group-item" exam-type="1">
+      			<h4 class="list-group-item-heading">600点レベルから10問</h4>
+    	  	</a>
+      		<a class="list-group-item" exam-type="2">
+      			<h4 class="list-group-item-heading">600点レベルから30問</h4>
+      		</a>
+      		<a class="list-group-item" exam-type="3">
+      			<h4 class="list-group-item-heading">730点レベルから10問</h4>
+      		</a>
+      		<a class="list-group-item" exam-type="4">
+      			<h4 class="list-group-item-heading">730点レベルから30問</h4>
+      		</a>
+      		<a class="list-group-item" exam-type="5">
+      			<h4 class="list-group-item-heading">860点レベルから10問</h4>
+      		</a>
+      		<a class="list-group-item" exam-type="6">
+      			<h4 class="list-group-item-heading">860点レベルから30問</h4>
+      		</a>
+      		<a class="list-group-item" exam-type="7">
+      			<h4 class="list-group-item-heading">990点レベルから10問</h4>
+      		</a>
+      		<a class="list-group-item" exam-type="8">
+      			<h4 class="list-group-item-heading">990点レベルから30問</h4>
+      		</a>
+      		<a class="list-group-item" exam-type="9">
+      			<h4 class="list-group-item-heading">その他から10問</h4>
+      		</a>
+      		<a class="list-group-item" exam-type="10">
+      			<h4 class="list-group-item-heading">その他から30問</h4>
+      		</a>
+      		<a class="list-group-item" exam-type="11">
+      			<h4 class="list-group-item-heading">全問題から10問</h4>
+      		</a>
+      		<a class="list-group-item" exam-type="12">
+      			<h4 class="list-group-item-heading">全問題から30問</h4>
+      		</a> -->
+          <a class="list-group-item" exam-type="1">
+            <h4>６００点レベルからランダム１０問</h4>
+          </a>
+          <a class="list-group-item" exam-type="2">
+            <h4>７３０点レベルからランダム１０問</h4>
+          </a>
+          <a class="list-group-item" exam-type="3">
+            <h4>８６０点レベルからランダム１０問</h4>
+          </a>
+          <a class="list-group-item" exam-type="4">
+            <h4>９９０点レベルからランダム１０問</h4>
+          </a>
+      	</div>
+    	</table>
+    </div>
+    <div id="div-exam-input-forms" style="display:hidden">
+      <div style="margin-top:10px;overflow:hidden;">
+        <div class="div-exam-status-elements">
+          <span id="questionNumber" class="q-caption">Q0</span>
+        </div>
+        <div class="div-exam-status-elements">
+          <h4><span id="span-true-count" class="label label-success">TRUE&nbsp;:&nbsp;0</span></h4>
+        </div>
+        <div class="div-exam-status-elements">
+          <h4><span id="span-false-count" class="label label-danger">FALSE&nbsp;:&nbsp;0</span></h4>
+        </div>
+        <div class="div-exam-status-elements">
+          <h4><span id="span-rest-count" class="label label-default">REST&nbsp;:&nbsp;0</span></h4>
+        </div>
+      </div>
+      <div id="question-area" style="margin-top:10px;">
+        <span id="question-context"><span>
+      </div>
+      <div style="margin-top:20px;">
+        <div style="color:#666;">Input Answer</div>
+        <input id="inputAnswerValue" style="font-size:x-large;height:initial;" type="text" class="form-control" placeholder="Input Answer" value="">
+      </div>
+      <div style="margin-top:10px;">
+        <button id="btn-answer" class="btn btn-primary">ANSWER</button>
+        <button id="btn-next" class="btn btn-success">NEXT QUESTION</button>
+        <button id="btn-give-up" class="btn btn-warning">GIVE UP</button>
+        <button id="btn-back-to-menu" class="btn btn-defualt">BACK TO MENU</button>
+      </div>
+      <div id="answer-area" style="display:none">
+        <div id="animation-area"></div>
+        <div id="comment-area" style="padding: 5px;"></div>
+        <div id="button-area" style="padding: 5px;"></div>
+      </div>
+    </div>
+    <div id="div-exam-finish" style="display:hidden">
+      <div style="margin-bottom:10px;">
+        <button id="btn-finish-home" class="btn btn-default">
+          <span class="glyphicon glyphicon-home" aria-hidden="true"></span> BACK TO HOME
+        </button>
+        <button id="btn-finish-menu" class="btn btn-warning">
+          <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> BACK TO MENU
+        </button>
+        <button id="btn-finish-retry" class="btn btn-info">
+          <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span> RETRY
+        </button>
+      </div>
+      <div id="div-exam-items" class="panel panel-default">
+        <div class="panel-heading">
+          RESULT
+        </div>
+        <table class="table">
+      		<thead>
+      			<tr>
+      				<th>Q no.</th>
+      				<th>Question.</th>
+      				<th>Answer.</th>
+      				<th>T/F</th>
+              <th>score</th>
+      			</tr>
+      		</thead>
+      		<tbody id="tbody-finish-list"></tbody>
+      	</table>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div id="footer">
+    <span id="copyright">Copyright © 2016 Awecen All Rights Reserved.</span>
+  </div>
+
+  <!-- LOAD SCRIPT -->
+  <script type="text/javascript" src="js/exam.js"></script>
+</body>
+</html>
