@@ -54,7 +54,15 @@ crypto = AES.new(secret_key)
 
 # DBへログイン
 # localhostの場合は省略可
-connector = MySQLdb.connect(host="localhost", db="gphrases", user="root", passwd="mysql", charset="utf8")
+inifile = ConfigParser.SafeConfigParser()
+inifile.read('./config.ini')
+host = inifile.get('mysql', 'host')
+db = inifile.get('mysql', 'db')
+user = inifile.get('mysql', 'user')
+passwd = inifile.get('mysql', 'passwd')
+charset = inifile.get('mysql', 'charset')
+
+connector = MySQLdb.connect(host=host, db=db, user=user, passwd=passwd, charset=charset)
 cursor = connector.cursor()
 
 ###### Temp Exam result #####
