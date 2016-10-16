@@ -50,7 +50,7 @@ fw.write("\ngenre: %s / qnum: %s / answer: %s / user: %s / examtype: %s"%(str(g)
 #Procedure
 
 ##### AES Tool #####
-secret_key = 'this is secret:)'
+secret_key = inifile.get('pycrypto', 'key')
 crypto = AES.new(secret_key)
 
 # DBへログイン

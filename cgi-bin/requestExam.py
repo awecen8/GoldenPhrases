@@ -71,7 +71,7 @@ connector = MySQLdb.connect(host=host, db=db, user=user, passwd=passwd, charset=
 cursor = connector.cursor()
 
 ##### AES Util #####
-secret_key = 'this is secret:)'
+secret_key = inifile.get('pycrypto', 'key')
 crypto = AES.new(secret_key)
 
 ##### temp data ######

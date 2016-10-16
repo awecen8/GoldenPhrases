@@ -63,7 +63,7 @@ connector.close()
 
 try:
     # Decrypt
-    secret_key = 'this is secret:)'
+    secret_key = inifile.get('pycrypto', 'key')
     crypto = AES.new(secret_key)
     hx = rec[0][2]
     cipher_data = crypto.decrypt(hx.decode('hex'))

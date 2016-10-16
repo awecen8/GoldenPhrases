@@ -54,7 +54,7 @@ try:
     #Procedure
 
     ##### AES Tools #####
-    secret_key = 'this is secret:)'
+    secret_key = inifile.get('pycrypto', 'key')
     crypto = AES.new(secret_key)
 
     ##### DB LOGIN #####

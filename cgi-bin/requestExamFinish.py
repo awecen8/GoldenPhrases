@@ -40,7 +40,7 @@ fw.write("\nexamtype:%s/user:%s"%(str(e),str(u)))
 #Procedure
 
 ##### AES Tools #####
-secret_key = 'this is secret:)'
+secret_key = inifile.get('pycrypto', 'key')
 crypto = AES.new(secret_key)
 
 ##### DB Login #####

@@ -62,7 +62,7 @@ cursor.close()
 connector.close()
 
 # Encrypt
-secret_key = 'this is secret:)'
+secret_key = inifile.get('pycrypto', 'key')
 crypto = AES.new(secret_key)
 message = p
 if len(message)%16 != 0:
