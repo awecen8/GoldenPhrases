@@ -218,7 +218,7 @@ else:
 if isFinish == 0:
     # DBへログイン
     # localhostの場合は省略可
-    connector = MySQLdb.connect(host="localhost", db="gphrases", user="root", passwd="mysql", charset="utf8")
+    connector = MySQLdb.connect(host=host, db=db, user=user, passwd=passwd, charset=charset)
     cursor = connector.cursor()
     # SQL
     sql = "SELECT * FROM goldenPhrases WHERE genre = \'" + str(randg) + "\' AND qnumber = \'" + str(randq) + "\' ;"
