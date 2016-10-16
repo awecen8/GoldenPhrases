@@ -49,14 +49,16 @@ fw.write("\ngenre: %s / qnum: %s / answer: %s / user: %s / examtype: %s"%(str(g)
 
 #Procedure
 
+##### Read Setting File #####
+inifile = ConfigParser.SafeConfigParser()
+inifile.read('./config.ini')
+
 ##### AES Tool #####
 secret_key = inifile.get('pycrypto', 'key')
 crypto = AES.new(secret_key)
 
 # DBへログイン
 # localhostの場合は省略可
-inifile = ConfigParser.SafeConfigParser()
-inifile.read('./config.ini')
 host = inifile.get('mysql', 'host')
 db = inifile.get('mysql', 'db')
 user = inifile.get('mysql', 'user')
