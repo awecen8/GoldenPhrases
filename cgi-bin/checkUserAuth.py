@@ -11,15 +11,15 @@ import os,cgi,cgitb,Cookie; cgitb.enable()
 from Cookie import SimpleCookie
 from Crypto.Cipher import AES
 
+fw = open('./src/debug_' + datetime.datetime.now().strftime('%Y%m%d') + '.log','a')
+fw.write("\n%s"%"---------" + datetime.datetime.now().strftime('%H:%M:%S') + "----------")
+
 if os.environ['REQUEST_METHOD'] != "POST":
     print 'Access Denied.'
     sys.exit()
 
 #Check Values#Check Values
 form = cgi.FieldStorage()
-
-fw = open('./src/debug.log','a')
-fw.write("\n%s"%"---------" + datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S') + "----------")
 
 if not form.has_key("user"):
     print 'No input value'
