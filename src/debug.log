@@ -38382,3 +38382,214 @@ SELECT * FROM monster WHERE user = 'arakawa';
 user:arakawa
 SELECT * FROM users WHERE name = 'arakawa' ;
 (3L, u'arakawa', u'0944d3103b730dd11985a972e463096f', u'A')
+---------2016/10/16 11:46:41----------
+user:arakawa
+SELECT * FROM users WHERE name = 'arakawa' ;
+(3L, u'arakawa', u'0944d3103b730dd11985a972e463096f', u'A')
+---------2016/10/16 11:47:18----------
+user:arakawa
+SELECT * FROM users WHERE name = 'arakawa' ;
+(3L, u'arakawa', u'0944d3103b730dd11985a972e463096f', u'A')
+---------requestLoadMonsterData.py(2016/10/16 11:47:32)----------
+SELECT * FROM monster WHERE user = 'arakawa';
+((1L, u'arakawa', 75L, 2L, 0L, 24L, 0L, 0L, 11L, 40L, 865L, 865L, 2L, 2L, 1L, u'1-1-0-0-0-0', 0L),)
+[{"play":"75","prize":"2","tecnt":"0","tncnt":"24","thcnt":"0","tmcnt":"0","tzcnt":"11","fcnt":"40","exp":"865","allexp":"865","exprate":"2","level":"2","type":"1","bio":"1-1-0-0-0-0","reset":"0"}]
+---------requestMonsterInfo.py(2016/10/16 11:47:37)----------
+---------2016/10/16 11:47:46----------
+user:arakawa
+SELECT * FROM users WHERE name = 'arakawa' ;
+(3L, u'arakawa', u'0944d3103b730dd11985a972e463096f', u'A')
+---------requestUserStats.py(2016/10/16 11:47:48)----------
+level:1/user:arakawa
+encScore:bd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cd
+decScore:5555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555
+len(rec):400
+---------requestUserStats.py(2016/10/16 11:47:52)----------
+level:4/user:arakawa
+encScore:214fe51c69af228522ab0d9c02d34822c84b10e3505dd1c90c4d6bdc27986b31c84b10e3505dd1c90c4d6bdc27986b31c84b10e3505dd1c90c4d6bdc27986b31c84b10e3505dd1c90c4d6bdc27986b31c84b10e3505dd1c90c4d6bdc27986b3177e17b5e27b2e66618df5e104f80e516
+decScore:0100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+len(rec):100
+---------requestExam.py(2016/10/16 11:47:58)----------
+examtype:4/user:arakawa
+sqlmaxid:SELECT IFNULL((SELECT MAX(id) + 1 FROM examtemp),1); 
+sqluserscore:SELECT * FROM score WHERE user = 'arakawa' AND examtype = 4;
+DecUserScoreArray:['0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
+RandomWeightArrayLength:499
+---------2016/10/16 11:51:02----------
+user:arakawa
+SELECT * FROM users WHERE name = 'arakawa' ;
+(3L, u'arakawa', u'0944d3103b730dd11985a972e463096f', u'A')
+---------2016/10/16 11:51:05----------
+---------2016/10/16 11:51:16----------
+user:arakawa
+SELECT * FROM users WHERE name = 'arakawa' ;
+(3L, u'arakawa', u'0944d3103b730dd11985a972e463096f', u'A')
+---------requestExam.py(2016/10/16 11:51:19)----------
+examtype:1/user:arakawa
+sqlmaxid:SELECT IFNULL((SELECT MAX(id) + 1 FROM examtemp),1); 
+sqluserscore:SELECT * FROM score WHERE user = 'arakawa' AND examtype = 1;
+DecUserScoreArray:['5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5']
+RandomWeightArrayLength:0
+ctx:定期的に更新されるリスト
+qst:a r_______ updated list
+response:true
+---------requestExam.py(2016/10/16 11:51:22)----------
+examtype:4/user:arakawa
+encQuests:31e102a06e8f166e43dd7596b0ee18fef62693b3dd47e3650dcff75530d32da7 / encScore:16b53c132c4b03f961ea6ef898d55768
+quests:13:32:33:36:42:47:64:70:76:87 / score:0000000000
+ctx:ほんのわずかな費用で
+qst:for a n_______ fee
+response:true
+---------requestAnswerExam.py(2016/10/16 11:51:25)----------
+genre: 4 / qnum: 76 / answer: nominal / user: arakawa / examtype: 4
+SearchTempSql:SELECT * FROM examtemp WHERE user = 'arakawa' AND examtype = 4 ;
+score:0000000000
+select:SELECT * FROM goldenPhrases WHERE genre = 4 AND qnumber = '76' ;
+new:0000000010
+sqlupd:UPDATE examtemp SET score = 'c76eb693f496c4af0e4192a9d8937329' WHERE user = 'arakawa' AND examtype = 4 ;
+---------requestExam.py(2016/10/16 11:52:09)----------
+examtype:4/user:arakawa
+encQuests:31e102a06e8f166e43dd7596b0ee18fef62693b3dd47e3650dcff75530d32da7 / encScore:c76eb693f496c4af0e4192a9d8937329
+quests:13:32:33:36:42:47:64:70:76:87 / score:0000000010
+ctx:回り道をする
+qst:take a d_______
+response:true
+---------requestAnswerExam.py(2016/10/16 11:52:19)----------
+genre: 4 / qnum: 87 / answer: detuor / user: arakawa / examtype: 4
+SearchTempSql:SELECT * FROM examtemp WHERE user = 'arakawa' AND examtype = 4 ;
+score:0000000010
+select:SELECT * FROM goldenPhrases WHERE genre = 4 AND qnumber = '87' ;
+new:0000000012
+sqlupd:UPDATE examtemp SET score = 'f9ff9dd13aa2bd2502874068c298261b' WHERE user = 'arakawa' AND examtype = 4 ;
+---------requestExam.py(2016/10/16 11:54:18)----------
+examtype:4/user:arakawa
+encQuests:31e102a06e8f166e43dd7596b0ee18fef62693b3dd47e3650dcff75530d32da7 / encScore:f9ff9dd13aa2bd2502874068c298261b
+quests:13:32:33:36:42:47:64:70:76:87 / score:0000000012
+ctx:細心の注意を払って作られた芸術作品
+qst:m_______ created artwork
+response:true
+---------requestAnswerExam.py(2016/10/16 11:54:29)----------
+genre: 4 / qnum: 47 / answer: meticulously / user: arakawa / examtype: 4
+SearchTempSql:SELECT * FROM examtemp WHERE user = 'arakawa' AND examtype = 4 ;
+score:0000000012
+select:SELECT * FROM goldenPhrases WHERE genre = 4 AND qnumber = '47' ;
+new:0000010012
+sqlupd:UPDATE examtemp SET score = '3a8cdc6737091b024507ffbb7147fb8d' WHERE user = 'arakawa' AND examtype = 4 ;
+---------2016/10/16 11:55:12----------
+user:arakawa
+SELECT * FROM users WHERE name = 'arakawa' ;
+(3L, u'arakawa', u'0944d3103b730dd11985a972e463096f', u'A')
+---------requestUserStats.py(2016/10/16 11:55:13)----------
+level:1/user:arakawa
+encScore:bd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cdbd509897d7e59be257e87835af31f7cd
+decScore:5555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555
+len(rec):400
+---------requestUserStats.py(2016/10/16 11:55:18)----------
+level:5/user:arakawa
+len(rec):**EXCEPTION**
+---------requestUserStats.py(2016/10/16 11:55:19)----------
+level:4/user:arakawa
+encScore:214fe51c69af228522ab0d9c02d34822c84b10e3505dd1c90c4d6bdc27986b31c84b10e3505dd1c90c4d6bdc27986b31c84b10e3505dd1c90c4d6bdc27986b31c84b10e3505dd1c90c4d6bdc27986b31c84b10e3505dd1c90c4d6bdc27986b3177e17b5e27b2e66618df5e104f80e516
+decScore:0100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+len(rec):100
+---------requestLoadMonsterData.py(2016/10/16 11:55:24)----------
+SELECT * FROM monster WHERE user = 'arakawa';
+((1L, u'arakawa', 75L, 2L, 0L, 24L, 0L, 0L, 11L, 40L, 865L, 865L, 2L, 2L, 1L, u'1-1-0-0-0-0', 0L),)
+[{"play":"75","prize":"2","tecnt":"0","tncnt":"24","thcnt":"0","tmcnt":"0","tzcnt":"11","fcnt":"40","exp":"865","allexp":"865","exprate":"2","level":"2","type":"1","bio":"1-1-0-0-0-0","reset":"0"}]
+---------requestSaveMonsterData.py(2016/10/16 11:55:26)----------
+FieldStorage(None, None, [MiniFieldStorage('user', 'arakawa'), MiniFieldStorage('play', '75'), MiniFieldStorage('prize', '2'), MiniFieldStorage('tecnt', '0'), MiniFieldStorage('tncnt', '24'), MiniFieldStorage('thcnt', '0'), MiniFieldStorage('tmcnt', '0'), MiniFieldStorage('tzcnt', '11'), MiniFieldStorage('fcnt', '40'), MiniFieldStorage('exp', '865'), MiniFieldStorage('allexp', '865'), MiniFieldStorage('exprate', '2'), MiniFieldStorage('level', '2'), MiniFieldStorage('type', '1'), MiniFieldStorage('bio', '1-1-0-0-0-0'), MiniFieldStorage('reset', '0')])
+SELECT * FROM monster WHERE user = 'arakawa';
+UPDATE
+1
+UPDATE monster SET play = 75, prize = 2, tecnt = 0, tncnt = 24, thcnt = 0,tmcnt = 0, tzcnt = 11, fcnt = 40, exp = 865, allexp = 865, exprate = 2, level = 2, type = 1, bio = '1-1-0-0-0-0', reset = 0 WHERE id = 1 ;
+---------requestLoadMonsterData.py(2016/10/16 11:55:29)----------
+SELECT * FROM monster WHERE user = 'arakawa';
+((1L, u'arakawa', 75L, 2L, 0L, 24L, 0L, 0L, 11L, 40L, 865L, 865L, 2L, 2L, 1L, u'1-1-0-0-0-0', 0L),)
+[{"play":"75","prize":"2","tecnt":"0","tncnt":"24","thcnt":"0","tmcnt":"0","tzcnt":"11","fcnt":"40","exp":"865","allexp":"865","exprate":"2","level":"2","type":"1","bio":"1-1-0-0-0-0","reset":"0"}]
+---------requestSaveMonsterData.py(2016/10/16 11:55:40)----------
+FieldStorage(None, None, [MiniFieldStorage('user', 'arakawa'), MiniFieldStorage('play', '80'), MiniFieldStorage('prize', '2'), MiniFieldStorage('tecnt', '0'), MiniFieldStorage('tncnt', '29'), MiniFieldStorage('thcnt', '0'), MiniFieldStorage('tmcnt', '0'), MiniFieldStorage('tzcnt', '11'), MiniFieldStorage('fcnt', '40'), MiniFieldStorage('exp', '915'), MiniFieldStorage('allexp', '915'), MiniFieldStorage('exprate', '2'), MiniFieldStorage('level', '2'), MiniFieldStorage('type', '1'), MiniFieldStorage('bio', '1-1-0-0-0-0'), MiniFieldStorage('reset', '0')])
+SELECT * FROM monster WHERE user = 'arakawa';
+UPDATE
+1
+UPDATE monster SET play = 80, prize = 2, tecnt = 0, tncnt = 29, thcnt = 0,tmcnt = 0, tzcnt = 11, fcnt = 40, exp = 915, allexp = 915, exprate = 2, level = 2, type = 1, bio = '1-1-0-0-0-0', reset = 0 WHERE id = 1 ;
+---------requestLoadMonsterData.py(2016/10/16 11:55:48)----------
+SELECT * FROM monster WHERE user = 'arakawa';
+((1L, u'arakawa', 80L, 2L, 0L, 29L, 0L, 0L, 11L, 40L, 915L, 915L, 2L, 2L, 1L, u'1-1-0-0-0-0', 0L),)
+[{"play":"80","prize":"2","tecnt":"0","tncnt":"29","thcnt":"0","tmcnt":"0","tzcnt":"11","fcnt":"40","exp":"915","allexp":"915","exprate":"2","level":"2","type":"1","bio":"1-1-0-0-0-0","reset":"0"}]
+---------requestLoadMonsterData.py(2016/10/16 11:55:53)----------
+SELECT * FROM monster WHERE user = 'arakawa';
+((1L, u'arakawa', 80L, 2L, 0L, 29L, 0L, 0L, 11L, 40L, 915L, 915L, 2L, 2L, 1L, u'1-1-0-0-0-0', 0L),)
+[{"play":"80","prize":"2","tecnt":"0","tncnt":"29","thcnt":"0","tmcnt":"0","tzcnt":"11","fcnt":"40","exp":"915","allexp":"915","exprate":"2","level":"2","type":"1","bio":"1-1-0-0-0-0","reset":"0"}]
+---------2016/10/16 11:56:07----------
+(75L, 1L, 75L, u'\u30c6\u30c3\u30af\u30b9\u306f\u554f\u984c\u306b\u6c17\u4ed8\u3044\u3066\u3044\u305f\u3002', u'Tex was a_______ of the problem.', u'aware', u'\u6c17\u4ed8\u3044\u3066<br><br>be aware that S+V\uff08\uff5e\u3059\u308b\u3053\u3068\u306b\u6c17\u4ed8\u304f\uff09\u306e\u5f62\u3082\u53d6\u308b\u3002 awareness\uff08\u8a8d\u8b58\u3001\u8a8d\u77e5\uff09<br>')
+---------2016/10/16 11:56:52----------
+(46L, 1L, 46L, u'\u5143\u306e\u72b6\u614b\u3067', u'in o_______ condition', u'original', u'\u5143\u306e\u3001\u6700\u521d\u306e\u3000 \u30aa\u30ea\u30b8\u30ca\u30eb\u3001\u539f\u672c<br><br>\u300c\u30aa\u30ea\u30b8\u30ca\u30eb\u306e\u300d\u306e\u610f\u5473\u3067\u3082\u51fa\u308b\u3002<br><br>an original work\uff08\u30aa\u30ea\u30b8\u30ca\u30eb\u4f5c\u54c1\uff09<br><br>originally\uff08\u3082\u3068\u3082\u3068\u3001\u6700\u521d\u306b\uff09<br>')
+---------2016/10/16 11:58:41----------
+user:manabe
+SELECT * FROM users WHERE name = 'manabe' ;
+(2L, u'manabe', u'f4bd3765d50d5aec4eb7dee91ebebf07', u'A')
+---------2016/10/16 14:38:37----------
+user:manabe
+SELECT * FROM users WHERE name = 'manabe' ;
+(2L, u'manabe', u'f4bd3765d50d5aec4eb7dee91ebebf07', u'A')
+---------requestExam.py(2016/10/16 14:38:59)----------
+examtype:4/user:manabe
+sqlmaxid:SELECT IFNULL((SELECT MAX(id) + 1 FROM examtemp),1); 
+sqluserscore:SELECT * FROM score WHERE user = 'manabe' AND examtype = 4;
+---------requestExam.py(2016/10/16 14:39:25)----------
+examtype:1/user:manabe
+sqlmaxid:SELECT IFNULL((SELECT MAX(id) + 1 FROM examtemp),1); 
+sqluserscore:SELECT * FROM score WHERE user = 'manabe' AND examtype = 1;
+DecUserScoreArray:['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '1', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '1', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
+RandomWeightArrayLength:1983
+ctx:その本には役立つ情報が含まれている。
+qst:The book c_______s useful information.
+response:true
+---------requestExam.py(2016/10/16 14:39:29)----------
+examtype:4/user:manabe
+sqlmaxid:SELECT IFNULL((SELECT MAX(id) + 1 FROM examtemp),1); 
+sqluserscore:SELECT * FROM score WHERE user = 'manabe' AND examtype = 4;
+---------2016/10/16 14:39:45----------
+(9L, 1L, 9L, u'\u9031\u520a\u8a8c', u'a w_______ magazine', u'weekly', u'[\u5f62]\u9031\u306b\u4e00\u5ea6\u306e[\u526f]\u9031\u306b\u4e00\u5ea6<br><br><br>[cf]-ly\u3067\u7d42\u308f\u308b\u5358\u8a9e\u306f\u901a\u5e38\u526f\u8a5e\u3060\u304c\u3001\u4ee5\u4e0b\u306e\u5358\u8a9e\u306f\u5f62\u5bb9\u8a5e\u7528\u6cd5\u304c\u91cd\u8981\u3002<br>[ex] daily / weekly / monthly / yearly\uff08\u6bce\u65e5\u30fb\u9031\u30fb\u6708\u30fb\u5e74\u306e\uff09\u3001 nightly\uff08\u6bce\u6669\u306e\uff09\u3001timely\uff08\u30bf\u30a4\u30e0\u30ea\u30fc\u306a\uff09\u3001costly\uff08\u304a\u91d1\u306e\u304b\u304b\u308b\uff09<br>')
+---------2016/10/16 14:41:51----------
+user:arakawa
+SELECT * FROM users WHERE name = 'arakawa' ;
+(3L, u'arakawa', u'0944d3103b730dd11985a972e463096f', u'A')
+---------requestExam.py(2016/10/16 14:41:58)----------
+examtype:4/user:arakawa
+encQuests:31e102a06e8f166e43dd7596b0ee18fef62693b3dd47e3650dcff75530d32da7 / encScore:3a8cdc6737091b024507ffbb7147fb8d
+quests:13:32:33:36:42:47:64:70:76:87 / score:0000010012
+ctx:繰り返しの多い作業
+qst:r_______ work
+response:true
+---------2016/10/16 14:42:01----------
+(96L, 1L, 96L, u'\u6211\u3005\u306f\uff5e\u3060\u3068\u56fa\u304f\u4fe1\u3058\u3066\u3044\u308b', u'we f_______ believe that', u'firmly', u'\u56fa\u304f<br><br>firmly believe that S+V\uff08\uff5e\u3060\u3068\u56fa\u304f\u4fe1\u3058\u308b\uff09\u306e\u5f62\u3067\u62bc\u3055\u3048\u308b\u3002<br>')
+---------2016/10/16 14:58:24----------
+(37L, 1L, 37L, u'\u901f\u9054\u90f5\u4fbf\u3067', u'by express m_______', u'mail', u'\u90f5\u4fbf\u7269\u3001\u90f5\u4fbf\u914d\u9054\u3000 \u90f5\u9001\u3059\u308b<br><br>\u3000\u624b\u6bb5\u3092\u8868\u3059by \u3068\u5408\u308f\u305b\u3066\u899a\u3048\u3088\u3046\u3002\u3061\u306a\u307f\u306b\u3001TOEIC\u306e\u4e16\u754c\u306b\u306f\u3001\u9867\u5ba2\u306b\u7121\u65ad\u3067\u5272\u9ad8\u306e\u901f\u9054\u3067\u30d0\u30f3<br><br>\u30d0\u30f3\u5546\u54c1\u3092\u9001\u308a\u3001\u30af\u30ec\u30fc\u30e0\u304c\u591a\u767a\u3057\u305f\u901a\u8ca9\u4f1a\u793e\u304c\u5b58\u5728\u3059\u308b\u3002<br>')
+---------requestExam.py(2016/10/16 14:58:58)----------
+examtype:1/user:arakawa
+encQuests:139e0e3b3f7304d40530898d5c37f3b28a01381e17199f9e73c8bf6043d2a15637b974dd281741e42d501aa011bcc309 / encScore:16b53c132c4b03f961ea6ef898d55768
+quests:26:50:54:154:167:197:238:309:333:352 / score:0000000000
+ctx:成功の可能性
+qst:p_______ of success
+response:true
+---------requestAnswerExam.py(2016/10/16 14:59:02)----------
+genre: 1 / qnum: 54 / answer: possibility / user: arakawa / examtype: 1
+---------requestExam.py(2016/10/16 15:03:56)----------
+examtype:1/user:arakawa
+encQuests:139e0e3b3f7304d40530898d5c37f3b28a01381e17199f9e73c8bf6043d2a15637b974dd281741e42d501aa011bcc309 / encScore:16b53c132c4b03f961ea6ef898d55768
+quests:26:50:54:154:167:197:238:309:333:352 / score:0000000000
+ctx:契約に署名する前に
+qst:before signing a c_______
+response:true
+---------requestAnswerExam.py(2016/10/16 15:04:02)----------
+genre: 1 / qnum: 154 / answer: contract / user: arakawa / examtype: 1
+---------requestExam.py(2016/10/16 15:08:18)----------
+examtype:1/user:arakawa
+encQuests:139e0e3b3f7304d40530898d5c37f3b28a01381e17199f9e73c8bf6043d2a15637b974dd281741e42d501aa011bcc309 / encScore:16b53c132c4b03f961ea6ef898d55768
+quests:26:50:54:154:167:197:238:309:333:352 / score:0000000000
+ctx:抽選会を行う
+qst:hold a d_______
+response:true
+---------requestAnswerExam.py(2016/10/16 15:08:25)----------
+genre: 1 / qnum: 309 / answer: depart / user: arakawa / examtype: 1

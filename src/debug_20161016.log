@@ -1,0 +1,29 @@
+
+---------11:46:35----------
+user:arakawa/pass:arakawa
+SELECT * FROM users WHERE name = 'arakawa' ;
+(3L, u'arakawa', u'0944d3103b730dd11985a972e463096f', u'A')
+arakawa
+Set-Cookie: auth=arakawa; expires=Sun, 16-Oct-2016 12:46:35 GMT; Path=/
+true
+---------11:51:15----------
+user:arakawa/pass:arakawa
+SELECT * FROM users WHERE name = 'arakawa' ;
+(3L, u'arakawa', u'0944d3103b730dd11985a972e463096f', u'A')
+arakawa
+Set-Cookie: auth=arakawa; expires=Sun, 16-Oct-2016 12:51:15 GMT; Path=/
+true
+---------11:58:29----------
+user:manabe/pass:manabe
+SELECT * FROM users WHERE name = 'manabe' ;
+(2L, u'manabe', u'f4bd3765d50d5aec4eb7dee91ebebf07', u'A')
+manabe
+Set-Cookie: auth=manabe; expires=Sun, 16-Oct-2016 12:58:29 GMT; Path=/
+true
+---------14:41:47----------
+user:arakawa/pass:arakawa
+SELECT * FROM users WHERE name = 'arakawa' ;
+(3L, u'arakawa', u'0944d3103b730dd11985a972e463096f', u'A')
+arakawa
+Set-Cookie: auth=arakawa; expires=Sun, 16-Oct-2016 15:41:47 GMT; Path=/
+true
