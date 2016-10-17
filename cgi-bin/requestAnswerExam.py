@@ -42,8 +42,8 @@ v   = form["inputAnswerValue"].value
 u   = form["user"].value
 t   = form["examtype"].value
 
-fw = open('./src/debug.log','a')
-fw.write("\n%s"%"---------requestAnswerExam.py(" + datetime.now().strftime('%Y/%m/%d %H:%M:%S') + ")----------")
+fw = open('./src/debug_' + datetime.datetime.now().strftime('%Y%m%d') + '.log','a')
+fw.write("\n%s"%"---------requestAnswerExam.py" + datetime.datetime.now().strftime('%H:%M:%S') + "----------")
 
 fw.write("\ngenre: %s / qnum: %s / answer: %s / user: %s / examtype: %s"%(str(g),str(q),str(v),str(u),str(t)))
 
@@ -127,6 +127,9 @@ connector.commit()
 
 cursor.close()
 connector.close()
+
+fw.write("\nresponseAnswer({'genre':'%s','qnumber':'%s','result':'%s','ans':'%s','comment':'%s'});"%(str(g),str(q),str(result),str(ans),str(comment)))
+fw.close()
 
 #Output
 print "Content-Type:text/javascript"
