@@ -43,7 +43,7 @@ u   = form["user"].value
 t   = form["examtype"].value
 
 fw = open('./src/debug_' + datetime.now().strftime('%Y%m%d') + '.log','a')
-fw.write("\n%s"%"---------requestAnswerExam.py" + datetime.datetime.now().strftime('%H:%M:%S') + "----------")
+fw.write("\n%s"%"---------requestAnswerExam.py" + datetime.now().strftime('%H:%M:%S') + "----------")
 
 fw.write("\ngenre: %s / qnum: %s / answer: %s / user: %s / examtype: %s"%(str(g),str(q),str(v),str(u),str(t)))
 
